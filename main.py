@@ -17,4 +17,11 @@ def currency_converter():
     converted_amount = amount * rate
     print(f"Сумма в рублях: {converted_amount}")
 
+    # Новый функционал без изменения существующего кода
+    choice = input("Вы хотите конвертировать обратно из рублей в доллары? (да/нет): ").strip().lower()
+    if choice == 'да':
+        amount_rub = float(input("Введите сумму в рублях: "))
+        converted_amount_usd = amount_rub / rate
+        print(f"Сумма в долларах: {converted_amount_usd}")
+
 currency_converter()
